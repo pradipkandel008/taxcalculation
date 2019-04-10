@@ -10,7 +10,8 @@ import android.widget.TextView;
 public class TaxActivity extends AppCompatActivity implements View.OnClickListener {
     EditText salary;
     TextView tax;
-    String getMonthlySalary,firsttax,secondtax,thirdtax,finaltaxamount,yearlysalary,secondamount,thirdamount;
+    String getMonthlySalary,firsttax,secondtax,thirdtax,finaltaxamount,
+            yearlysalary,secondamount,thirdamount;
     Button btn_tax;
 
 
@@ -43,7 +44,6 @@ public class TaxActivity extends AppCompatActivity implements View.OnClickListen
                     secondtax=((15*Double.parseDouble(secondamount))/100)+"";
                     finaltaxamount=Double.parseDouble(firsttax)+Double.parseDouble(secondtax)+"";
                 }
-
                 else if (Double.parseDouble(yearlysalary)>=350000){
                     thirdamount=Double.parseDouble(yearlysalary)-350000+"";
                     firsttax=(1*200000)/100+"";
@@ -56,7 +56,6 @@ public class TaxActivity extends AppCompatActivity implements View.OnClickListen
                     System.out.println(thirdtax);
                     System.out.println(finaltaxamount);
                 }
-
                 tax.setText(finaltaxamount);
         }
     }
